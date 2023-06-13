@@ -71,93 +71,93 @@ profile_tbl_2000 <- states_postalcodes_tbl[1001:2000, ] |>
 
 write_rds(profile_tbl_2000, "data/profile_tbl_2000.rds")
 
-profile_tbl_3000 <- states_postalcodes_tbl[2001:3000, ] |>
-  mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
-  unnest(obgyn_profile) |> 
-  # getting the insurance info from individual ob-gyn web page
-  mutate(
-        individual_url = str_glue("https://www.acog.org{profile_url}")
-    ) 
-
-write_rds(profile_tbl_3000, "data/profile_tbl_3000.rds")
-
-
-profile_tbl_4000 <- states_postalcodes_tbl[3001:4000, ] |>
-  mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
-  unnest(obgyn_profile) |> 
-  # getting the insurance info from individual ob-gyn web page
-  mutate(
-        individual_url = str_glue("https://www.acog.org{profile_url}")
-    ) 
-
-write_rds(profile_tbl_4000, "data/profile_tbl_4000.rds")
-
-
-profile_tbl_5000 <- states_postalcodes_tbl[4001:5000, ] |>
-  mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
-  unnest(obgyn_profile) |> 
-  # getting the insurance info from individual ob-gyn web page
-  mutate(
-        individual_url = str_glue("https://www.acog.org{profile_url}")
-    ) 
-
-write_rds(profile_tbl_5000, "data/profile_tbl_5000.rds")
-
-
-profile_tbl_6000 <- states_postalcodes_tbl[5001:6000, ] |>
-  mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
-  unnest(obgyn_profile) |> 
-  # getting the insurance info from individual ob-gyn web page
-  mutate(
-        individual_url = str_glue("https://www.acog.org{profile_url}")
-    ) 
-
-write_rds(profile_tbl_6000, "data/profile_tbl_6000.rds")
-
-
-profile_tbl_7000 <- states_postalcodes_tbl[6001:7000, ] |>
-  mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
-  unnest(obgyn_profile) |> 
-  # getting the insurance info from individual ob-gyn web page
-  mutate(
-        individual_url = str_glue("https://www.acog.org{profile_url}")
-    ) 
-
-write_rds(profile_tbl_7000, "data/profile_tbl_7000.rds")
-
-
-profile_tbl_8000 <- states_postalcodes_tbl[7001:8000, ] |>
-  mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
-  unnest(obgyn_profile) |> 
-  # getting the insurance info from individual ob-gyn web page
-  mutate(
-        individual_url = str_glue("https://www.acog.org{profile_url}")
-    ) 
-
-write_rds(profile_tbl_8000, "data/profile_tbl_8000.rds")
-
-
-profile_tbl_9918 <- states_postalcodes_tbl[8001:9918, ] |>
-  mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
-  unnest(obgyn_profile) |> 
-  # getting the insurance info from individual ob-gyn web page
-  mutate(
-        individual_url = str_glue("https://www.acog.org{profile_url}")
-    ) 
-
-write_rds(profile_tbl_9918, "data/profile_tbl_9918.rds")
+# profile_tbl_3000 <- states_postalcodes_tbl[2001:3000, ] |>
+#   mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
+#   unnest(obgyn_profile) |> 
+#   # getting the insurance info from individual ob-gyn web page
+#   mutate(
+#         individual_url = str_glue("https://www.acog.org{profile_url}")
+#     ) 
+# 
+# write_rds(profile_tbl_3000, "data/profile_tbl_3000.rds")
+# 
+# 
+# profile_tbl_4000 <- states_postalcodes_tbl[3001:4000, ] |>
+#   mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
+#   unnest(obgyn_profile) |> 
+#   # getting the insurance info from individual ob-gyn web page
+#   mutate(
+#         individual_url = str_glue("https://www.acog.org{profile_url}")
+#     ) 
+# 
+# write_rds(profile_tbl_4000, "data/profile_tbl_4000.rds")
+# 
+# 
+# profile_tbl_5000 <- states_postalcodes_tbl[4001:5000, ] |>
+#   mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
+#   unnest(obgyn_profile) |> 
+#   # getting the insurance info from individual ob-gyn web page
+#   mutate(
+#         individual_url = str_glue("https://www.acog.org{profile_url}")
+#     ) 
+# 
+# write_rds(profile_tbl_5000, "data/profile_tbl_5000.rds")
+# 
+# 
+# profile_tbl_6000 <- states_postalcodes_tbl[5001:6000, ] |>
+#   mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
+#   unnest(obgyn_profile) |> 
+#   # getting the insurance info from individual ob-gyn web page
+#   mutate(
+#         individual_url = str_glue("https://www.acog.org{profile_url}")
+#     ) 
+# 
+# write_rds(profile_tbl_6000, "data/profile_tbl_6000.rds")
+# 
+# 
+# profile_tbl_7000 <- states_postalcodes_tbl[6001:7000, ] |>
+#   mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
+#   unnest(obgyn_profile) |> 
+#   # getting the insurance info from individual ob-gyn web page
+#   mutate(
+#         individual_url = str_glue("https://www.acog.org{profile_url}")
+#     ) 
+# 
+# write_rds(profile_tbl_7000, "data/profile_tbl_7000.rds")
+# 
+# 
+# profile_tbl_8000 <- states_postalcodes_tbl[7001:8000, ] |>
+#   mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
+#   unnest(obgyn_profile) |> 
+#   # getting the insurance info from individual ob-gyn web page
+#   mutate(
+#         individual_url = str_glue("https://www.acog.org{profile_url}")
+#     ) 
+# 
+# write_rds(profile_tbl_8000, "data/profile_tbl_8000.rds")
+# 
+# 
+# profile_tbl_9918 <- states_postalcodes_tbl[8001:9918, ] |>
+#   mutate(obgyn_profile = future_map(postalcodes_search_url, get_all_profile_info)) |>
+#   unnest(obgyn_profile) |> 
+#   # getting the insurance info from individual ob-gyn web page
+#   mutate(
+#         individual_url = str_glue("https://www.acog.org{profile_url}")
+#     ) 
+# 
+# write_rds(profile_tbl_9918, "data/profile_tbl_9918.rds")
 
 
 
 all_profile_tbl <- profile_tbl_1000 |> 
-  bind_rows(profile_tbl_2000)|> 
-  bind_rows(profile_tbl_3000) |> 
-  bind_rows(profile_tbl_4000) |> 
-  bind_rows(profile_tbl_5000) |> 
-  bind_rows(profile_tbl_6000) |> 
-  bind_rows(profile_tbl_7000) |> 
-  bind_rows(profile_tbl_8000) |> 
-  bind_rows(profile_tbl_9918)
+  bind_rows(profile_tbl_2000)#|> 
+  # bind_rows(profile_tbl_3000) |> 
+  # bind_rows(profile_tbl_4000) |> 
+  # bind_rows(profile_tbl_5000) |> 
+  # bind_rows(profile_tbl_6000) |> 
+  # bind_rows(profile_tbl_7000) |> 
+  # bind_rows(profile_tbl_8000) |> 
+  # bind_rows(profile_tbl_9918)
 
 write_rds(all_profile_tbl, "all_profile_tbl.rds")
 
@@ -181,11 +181,11 @@ get_insurance_info <- function(obgyn_url){
 }
 
 # PROCESSED IN PARALLEL with furrr (5 minutes)
-# plan("multicore")
-# obgyn_profile_tbl <- all_profile_tbl |>
-#   mutate(obgyn_insurance = future_map(individual_url, get_insurance_info)) |>
-#   unnest(obgyn_insurance)
-# 
-# write_rds(obgyn_profile_tbl, "obgyn_profile.rds")
+plan("multicore")
+obgyn_profile_tbl <- all_profile_tbl |>
+  mutate(obgyn_insurance = future_map(individual_url, get_insurance_info)) |>
+  unnest(obgyn_insurance)
+
+write_rds(obgyn_profile_tbl, "obgyn_profile.rds")
 
 
