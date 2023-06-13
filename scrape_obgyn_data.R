@@ -181,7 +181,7 @@ get_insurance_info <- function(obgyn_url){
 }
 
 # PROCESSED IN PARALLEL with furrr (5 minutes)
-plan("multicore")
+# plan("multicore")
 # obgyn_profile_tbl <- all_profile_tbl |>
 #   mutate(obgyn_insurance = future_map(individual_url, get_insurance_info)) |>
 #   unnest(obgyn_insurance)
