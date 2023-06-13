@@ -182,10 +182,10 @@ get_insurance_info <- function(obgyn_url){
 
 # PROCESSED IN PARALLEL with furrr (5 minutes)
 plan("multicore")
-obgyn_profile_tbl <- all_profile_tbl |>
-  mutate(obgyn_insurance = future_map(individual_url, get_insurance_info)) |>
-  unnest(obgyn_insurance)
-
-write_rds(obgyn_profile_tbl, "obgyn_profile.rds")
+# obgyn_profile_tbl <- all_profile_tbl |>
+#   mutate(obgyn_insurance = future_map(individual_url, get_insurance_info)) |>
+#   unnest(obgyn_insurance)
+# 
+# write_rds(obgyn_profile_tbl, "obgyn_profile.rds")
 
 
